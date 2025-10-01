@@ -2,7 +2,7 @@
 
 A simple website that act as the team's public portal, accessedable at [ben.bensonchow.cf](https://ben.bensonchow.cf)
 
-## Updating the PDFs (local Git)
+## Updating the files (local Git method)
 
 If you already have a clone:
 
@@ -29,7 +29,7 @@ Set the remote URL:
 git remote add origin https://github.com/B-B-ENG1/website.git 
 ```
 
-## Updating the files (GitHub website)
+## Updating the files (GitHub website method)
 
 - Go to the relevent folder
 - Click “Add file” → “Upload files”
