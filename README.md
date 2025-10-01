@@ -31,7 +31,7 @@ git remote add origin https://github.com/B-B-ENG1/website.git
 
 ## Updating the PDFs (GitHub website)
 
-- Open https://github.com/B-B-ENG1/website
+- Go to https://github.com/B-B-ENG1/website/tree/main/static/pdfs
 - Click “Add file” → “Upload files”
 - Drag and drop the new PDF files (use the same filenames to replace existing ones)
 - Commit directly to the main branch
