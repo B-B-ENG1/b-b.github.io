@@ -8,7 +8,7 @@ If you already have a clone:
 
 ```bash
 git pull
-# Replace the PDF files in the repository with your updated versions
+# Replace the PDF/ JAR files in the repository with your updated versions
 git commit -m "Update files"
 git push origin main
 ```
@@ -18,7 +18,7 @@ If you're cloning for the first time:
 ```bash
 git clone https://github.com/B-B-ENG1/website.git
 cd website
-# Replace the PDF files in the repository with your updated versions
+# Replace the PDF/ JAR files in the repository with your updated versions
 git commit -m "Update files"
 git push origin main
 ```
@@ -33,5 +33,5 @@ git remote add origin https://github.com/B-B-ENG1/website.git
 
 - Go to the relevent folder
 - Click “Add file” → “Upload files”
-- Drag and drop the new PDF files (use the same filenames to replace existing ones)
+- Drag and drop the new PDF/ JAR files (use the same filenames to replace existing ones)
 - Commit directly to the main branch
