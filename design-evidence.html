@@ -11,17 +11,47 @@
 <body class="bg-gray-900 text-gray-100">
   <header class="bg-gray-900 border-b border-gray-800 sticky top-0 z-40">
     <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-    <div class="flex items-center space-x-2">
-    <span class="text-lg font-bold">ENG1 Project</span>
-    <span class="text-sm text-gray-400">Public Portal</span>
+      <div class="flex items-center space-x-2">
+        <span class="text-lg font-bold">ENG1 Project</span>
+        <span class="text-sm text-gray-400">Public Portal</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-6">
+        <a href="index.html#documents" class="hover:text-yellow-400">Documents</a>
+        <a href="index.html#download" class="hover:text-yellow-400">Download Game</a>
+        <a href="index.html#repository" class="hover:text-yellow-400">Github Organisation</a>
+        <a href="index.html#team" class="hover:text-yellow-400">Team</a>
+      </nav>
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" class="md:hidden flex items-center text-yellow-400 hover:text-yellow-300">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
-    <nav class="hidden md:flex items-center space-x-6">
-    <a href="index.html#documents" class="hover:text-yellow-400">Documents</a>
-    <a href="index.html#download" class="hover:text-yellow-400">Download Game</a>
-    <a href="index.html#repository" class="hover:text-yellow-400">Github Organisation</a>
-    <a href="index.html#team" class="hover:text-yellow-400">Team</a>
+    <!-- Mobile menu -->
+    <nav id="mobileMenu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-2">
+        <a href="index.html#documents" class="hover:text-yellow-400 py-2">Documents</a>
+        <a href="index.html#download" class="hover:text-yellow-400 py-2">Download Game</a>
+        <a href="index.html#repository" class="hover:text-yellow-400 py-2">Github Organisation</a>
+        <a href="index.html#team" class="hover:text-yellow-400 py-2">Team</a>
+      </div>
     </nav>
-    </div>
   </header>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // Close menu when a link is clicked
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+  
   <main id="main" class="container mx-auto px-4 py-8"></main>
 </body>
