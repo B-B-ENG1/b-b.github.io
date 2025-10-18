@@ -1,6 +1,6 @@
 # ENG1 Website
 
-A simple website that act as the team's public portal, accessedable at [ben.bensonchow.cf](https://eng-1.bensonc.how)
+A simple website that act as the team's public portal, accessedable at [eng-1.bensonc.how](https://eng-1.bensonc.how)
 
 ## Updating the files (local Git method)
 
