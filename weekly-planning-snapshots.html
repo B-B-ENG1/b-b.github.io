@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ENG1 Project Portal</title>
+  <meta name="theme-color" content="#111827" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Public portal for the ENG1 project with documents, game download, and repository links." />
+</head>
+<body class="bg-gray-900 text-gray-100">
+  
+  <div id="header-placeholder"></div>
+
+  <script src="assets/js/header.js" defer></script>
+  
+  <main id="main" class="container mx-auto px-4 py-8">
+    <section class="max-w-5xl mx-auto text-center">
+      <h1 class="text-3xl sm:text-4xl font-semibold mb-4">Weekly Planning Snapshots</h1>
+        <!-- Wrapper to center the images -->
+        <div class="flex flex-col items-center w-full">
+          <div id="snapshots-grid" class="grid gap-8 w-full max-w-6xl mx-auto" aria-live="polite">
+            <!-- Cards injected by the script below -->
+          </div>
+        </div>
+    </section>
+  </main>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const weeks = [
+          { src: 'assets/weekly-planning-snapshots/week1.png', alt: 'Week 1', caption: 'Week 1 — 03/10' },
+          { src: 'assets/weekly-planning-snapshots/week2.png', alt: 'Week 2', caption: 'Week 2 — 10/10' },
+          { src: 'assets/weekly-planning-snapshots/week3.png', alt: 'Week 3', caption: 'Week 3 — 17/10' },
+          { src: 'assets/weekly-planning-snapshots/week4.png', alt: 'Week 4', caption: 'Week 4 — 24/10' },
+          { src: 'assets/weekly-planning-snapshots/week5.png', alt: 'Week 5', caption: 'Week 5 — 31/10' }
+        ];
+
+        const container = document.getElementById('snapshots-grid');
+        if (!container) return;
+
+        container.innerHTML = weeks.map(w => `
+          <figure class="bg-gray-800 rounded-lg p-6 text-center w-full flex flex-col items-center">
+            <img src="${w.src}" alt="${w.alt}" class="w-full max-h-[1000px] object-contain rounded shadow block" />
+            <figcaption class="mt-4 text-base text-gray-300">${w.caption}</figcaption>
+          </figure>
+        `).join('');
+      });
+    </script>
+</body>
+</html>
