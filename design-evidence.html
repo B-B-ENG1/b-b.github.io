@@ -15,6 +15,38 @@
   <script src="assets/js/header.js" defer></script>
   
   <main id="main" class="container mx-auto px-4 py-8">
-    
+    <section class="max-w-5xl mx-auto text-center">
+      <h1 class="text-3xl sm:text-4xl font-semibold mb-4">Design evidences - interim diagrams</h1>
+        <!-- Wrapper to center the images -->
+        <div class="flex flex-col items-center w-full">
+          <div id="snapshots-grid" class="grid gap-8 w-full max-w-6xl mx-auto" aria-live="polite">
+            <!-- Cards injected by the script below -->
+          </div>
+        </div>
+    </section>
   </main>
+  
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const weeks = [
+          { src: 'assets/design-evidences/class-0.1.png', alt: 'v0.1', caption: 'Stable version of v0.1' },
+          { src: 'assets/design-evidences/class-0.2.png', alt: 'v0.2', caption: 'Stable version of v0.2' },
+          { src: 'assets/design-evidences/class-0.3.png', alt: 'v0.3', caption: 'Stable version of v0.3' },
+          { src: 'assets/design-evidences/class-0.4.png', alt: 'v0.4', caption: 'Stable version of v0.4' },
+          { src: 'assets/design-evidences/class-0.5.png', alt: 'v0.5', caption: 'Stable version of v0.5' },
+          { src: 'assets/design-evidences/class-0.6.png', alt: 'v0.6', caption: 'Stable version of v0.6' }
+        ];
+
+        const container = document.getElementById('snapshots-grid');
+        if (!container) return;
+
+        container.innerHTML = weeks.map(w => `
+          <figure class="bg-gray-800 rounded-lg p-6 text-center w-full flex flex-col items-center">
+            <img src="${w.src}" alt="${w.alt}" class="w-full max-h-[1000px] object-contain rounded shadow block" />
+            <figcaption class="mt-4 text-base text-gray-300">${w.caption}</figcaption>
+          </figure>
+        `).join('');
+      });
+    </script>
 </body>
+</html>
