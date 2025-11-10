@@ -2,6 +2,21 @@
 
 A simple website that act as the team's public portal, accessedable at [eng-1.bensonc.how](https://eng-1.bensonc.how)
 
+## Getting the website running in stage 2
+```bash
+git clone https://github.com/B-B-ENG1/website.git
+cd website
+rm CNAME
+```
+Create a new repository named `<your-github-username>.github.io` on GitHub.
+
+```bash
+git remote add origin <your new repo's url>
+git add .
+git commit -m "Remove team8's custom domain"
+git push -u origin main
+```
+
 ## Updating the files (local Git method)
 
 If you already have a clone:
