@@ -48,5 +48,5 @@ git remote add origin https://github.com/B-B-ENG1/website.git
 
 - Go to the relevent folder
 - Click “Add file” → “Upload files”
-- Drag and drop the new PDF/ JAR files (use the same filenames to replace existing ones)
+- Drag and drop the new files (use the same filenames to replace existing ones)
 - Commit directly to the main branch
