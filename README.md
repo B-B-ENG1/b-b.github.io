@@ -11,9 +11,9 @@ rm CNAME
 Create a new repository named `<your-github-username>.github.io` on GitHub.
 
 ```bash
-git remote add origin <your new repo's url>
+git remote add origin <your new repo url>
 git add .
-git commit -m "Remove team8's custom domain"
+git commit -m "Remove team8 custom domain"
 git push -u origin main
 ```
 
